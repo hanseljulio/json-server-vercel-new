@@ -21,7 +21,7 @@
       "walletId": "wallet-1",
       "addressId": "address-1",
       "shippingId": "shipping-1",
-      "gameCount": 0,
+      "gameCount": 1,
       "role": "user"
     },
     {
@@ -136,7 +136,7 @@
     {
       "id": "wallet-1",
       "userId": 2,
-      "balance": 350000,
+      "balance": 203340,
       "history": [
         {
           "id": 1,
@@ -167,6 +167,12 @@
           "date": "Fri Oct 20 2023 11:16:50 GMT+0700 (Western Indonesia Time)",
           "amount": 50000,
           "selfReferral": true
+        },
+        {
+          "id": 6,
+          "date": "Tue Oct 24 2023 15:46:25 GMT+0700 (Western Indonesia Time)",
+          "amount": -146660,
+          "selfReferral": false
         }
       ]
     },
@@ -266,10 +272,10 @@
         },
         {
           "id": 2,
-          "address": "This is my address test",
-          "province": "Jambi",
-          "city": "Kerinci",
-          "zip": "37319",
+          "address": "New address to prevent bugs",
+          "province": "Riau",
+          "city": "Rokan Hilir",
+          "zip": "28411",
           "adminId": 2
         },
         {
@@ -470,7 +476,8 @@
           "sameDay": true,
           "twoDay": false,
           "alreadyPaid": false,
-          "status": ""
+          "status": "",
+          "alreadyReviewed": false
         },
         {
           "id": 2,
@@ -496,8 +503,9 @@
           "insurance": true,
           "sameDay": false,
           "twoDay": true,
-          "alreadyPaid": false,
-          "status": ""
+          "alreadyPaid": true,
+          "status": "Delivered",
+          "alreadyReviewed": true
         },
         {
           "id": 3,
@@ -524,7 +532,8 @@
           "sameDay": false,
           "twoDay": false,
           "alreadyPaid": false,
-          "status": ""
+          "status": "",
+          "alreadyReviewed": false
         },
         {
           "id": 4,
@@ -551,7 +560,8 @@
           "sameDay": true,
           "twoDay": false,
           "alreadyPaid": false,
-          "status": ""
+          "status": "",
+          "alreadyReviewed": false
         },
         {
           "id": 5,
@@ -578,7 +588,8 @@
           "sameDay": true,
           "twoDay": false,
           "alreadyPaid": false,
-          "status": ""
+          "status": "",
+          "alreadyReviewed": false
         },
         {
           "id": 6,
@@ -605,7 +616,8 @@
           "sameDay": false,
           "twoDay": false,
           "alreadyPaid": false,
-          "status": ""
+          "status": "",
+          "alreadyReviewed": false
         },
         {
           "id": 7,
@@ -633,7 +645,8 @@
           "sameDay": false,
           "twoDay": false,
           "alreadyPaid": false,
-          "status": ""
+          "status": "",
+          "alreadyReviewed": false
         },
         {
           "id": 8,
@@ -661,7 +674,8 @@
           "sameDay": false,
           "twoDay": false,
           "alreadyPaid": false,
-          "status": ""
+          "status": "",
+          "alreadyReviewed": false
         },
         {
           "id": 9,
@@ -689,7 +703,8 @@
           "sameDay": false,
           "twoDay": false,
           "alreadyPaid": false,
-          "status": ""
+          "status": "",
+          "alreadyReviewed": false
         }
       ]
     },
@@ -742,7 +757,8 @@
           "sameDay": true,
           "twoDay": false,
           "alreadyPaid": false,
-          "status": ""
+          "status": "",
+          "alreadyReviewed": false
         }
       ]
     }
@@ -791,7 +807,16 @@
       "quantity": 2
     }
   ],
-  "adminEarnings": [],
+  "adminEarnings": [
+    {
+      "date": "Tue Oct 24 2023 15:46:25 GMT+0700 (Western Indonesia Time)",
+      "amount": 146660,
+      "fromUserId": 2,
+      "fromShippingId": "shipping-1",
+      "shippingNum": 2,
+      "id": 1
+    }
+  ],
   "adminAddress": [
     {
       "id": 1,
@@ -804,10 +829,10 @@
     {
       "id": 2,
       "userId": 2,
-      "address": "This is my address test",
-      "province": "Jambi",
-      "city": "Kerinci",
-      "zip": "37319"
+      "address": "New address to prevent bugs",
+      "province": "Riau",
+      "city": "Rokan Hilir",
+      "zip": "28411"
     },
     {
       "id": 3,
@@ -998,8 +1023,8 @@
       "insurance": true,
       "sameDay": false,
       "twoDay": true,
-      "alreadyPaid": false,
-      "status": ""
+      "alreadyPaid": true,
+      "status": "Delivered"
     },
     {
       "id": 3,
@@ -1219,6 +1244,15 @@
       "alreadyPaid": false,
       "status": "",
       "userId": 2
+    }
+  ],
+  "userReviews": [
+    {
+      "userId": 2,
+      "shippingNum": 2,
+      "review": "It was a great experience - thank you!\n\nAlso this is just a test.",
+      "date": "Tue Oct 24 2023 16:53:05 GMT+0700 (Western Indonesia Time)",
+      "id": 1
     }
   ]
 }
