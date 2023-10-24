@@ -19,8 +19,7 @@ const middlewares = jsonServer.defaults()
 server.use(middlewares)
 // Add this before server.use(router)
 server.use(jsonServer.rewriter({
-    "/auth/login?email=:email&password=:password": "/users?email=:email&password=:password",
-    "/auth/user/:id": "/users/:id",
+    "/auth/login?email=:email&password=:password": "/users?email=:email&password=:password"
 }))
 server.use(router)
 server.listen(3000, () => {
