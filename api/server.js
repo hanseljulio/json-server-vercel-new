@@ -25,7 +25,8 @@ server.use(middlewares)
 server.use(jsonServer.rewriter({
 
         '/api/*': '/$1',
-    '/blog/:resource/:id/show': '/:resource/:id'
+    '/blog/:resource/:id/show': '/:resource/:id',
+        '/auth/login?email=:email&password=:password': '/users?email=:email&password=:password'
 }))
 server.use(router)
 server.listen(3000, () => {
